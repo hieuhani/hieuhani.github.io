@@ -7,7 +7,7 @@ const MyApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   return (
     <MainLayout>
       <Head>
-        <title>hieuhani</title>
+        <title>Hieu Tran</title>
       </Head>
       <Component {...pageProps} />
     </MainLayout>

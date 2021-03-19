@@ -9,10 +9,17 @@ export const NavigationBar: React.FunctionComponent = () => {
       >
         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
           <div className="flex items-center justify-between w-full md:w-auto">
-            <a href="#">
-              <span className="sr-only">Hieuhani</span>
-              <img className="h-16 w-16 rounded-full" src="/hieuhani.svg" />
-            </a>
+            <Link href="/">
+              <a>
+                <div className="flex items-center">
+                  <img className="h-16 w-16 rounded-full" src="/hieuhani.svg" />
+                  <div className="ml-2">
+                    <h2 className="text-2xl">Hieu Tran</h2>
+                    <blockquote>Product oriented developer</blockquote>
+                  </div>
+                </div>
+              </a>
+            </Link>
           </div>
         </div>
         <div className="ml-auto md:space-x-8">
