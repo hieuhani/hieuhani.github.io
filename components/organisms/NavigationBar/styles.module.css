@@ -1,8 +1,9 @@
-.nav-items {
-  a {
-    @apply flex flex-col items-center;
-  }
-  a.active {
-    @apply block w-2 h-2 mt-1 rounded-full bg-yellow-500;
-  }
+.nav-items a {
+  @apply flex flex-col items-center;
+}
+
+.nav-items :global a.active:not(.index-link)::after,
+.nav-items :global a.active.exact-active::after {
+  content: ' ';
+  @apply block w-2 h-2 mt-1 rounded-full bg-yellow-500;
 }

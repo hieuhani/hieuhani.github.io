@@ -4,7 +4,7 @@ export const MainLayout: React.FunctionComponent = ({ children }) => {
   return (
     <>
       <NavigationBar />
-      <div className="container">{children}</div>
+      <div>{children}</div>
     </>
   )
 }
