@@ -1,0 +1,8 @@
+.nav-items {
+  a {
+    @apply flex flex-col items-center;
+  }
+  a.active {
+    @apply block w-2 h-2 mt-1 rounded-full bg-yellow-500;
+  }
+}

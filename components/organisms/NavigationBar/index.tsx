@@ -1,4 +1,6 @@
-import Link from 'next/link'
+import cx from 'classnames'
+import { ActiveLink as Link } from '@/components/molecules/ActiveLink'
+import styles from './styles.module.css'
 
 export const NavigationBar: React.FunctionComponent = () => {
   return (
@@ -22,7 +24,7 @@ export const NavigationBar: React.FunctionComponent = () => {
             </Link>
           </div>
         </div>
-        <div className="ml-auto md:space-x-8">
+        <div className={cx('ml-auto md:space-x-8 flex', styles['nav-items'])}>
           <Link href="/">
             <a className="font-medium text-gray-500 hover:text-gray-900">
               Home
