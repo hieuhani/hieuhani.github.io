@@ -16,9 +16,12 @@
     "gray-matter": "^4.0.2",
     "next": "10.0.9",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1"
   },
   "devDependencies": {
+    "@tailwindcss/jit": "^0.1.4",
     "@types/jest": "^26.0.21",
     "@types/node": "^14.14.35",
     "@types/react": "^17.0.3",
