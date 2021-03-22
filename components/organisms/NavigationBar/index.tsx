@@ -9,7 +9,7 @@ export const NavigationBar: React.FunctionComponent = () => {
   return (
     <div>
       <nav
-        className="py-4 flex items-center justify-between lg:justify-start"
+        className="px-4 py-4 sm:px-6 lg:px-8 flex items-center justify-between lg:justify-start"
         aria-label="Global"
       >
         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
@@ -43,11 +43,17 @@ export const NavigationBar: React.FunctionComponent = () => {
         </button>
         <nav
           id="navigation"
-          className={cx('fixed inset-0 bg-white z-10', {
-            hidden: !isMenuActive,
-          })}
+          className={cx(
+            'fixed inset-0 bg-white z-10 flex items-center justify-center	',
+            {
+              hidden: !isMenuActive,
+            },
+          )}
         >
-          <div className={cx('flex nav-items', styles['nav-items'])}>
+          <div
+            className={cx('flex flex-col nav-items', styles['nav-items'])}
+            onClick={toggleMenuActive}
+          >
             <Link href="/">
               <a className="font-medium text-gray-500 hover:text-gray-900 px-4">
                 Home

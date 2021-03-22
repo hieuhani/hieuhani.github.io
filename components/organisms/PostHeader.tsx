@@ -9,7 +9,7 @@ export const PostHeader: React.FunctionComponent<PostHeaderProps> = ({
   post,
 }) => (
   <header>
-    <div className="mb-8">
+    <div className="mb-8 text-center">
       <dl>
         <div>
           <dt className="sr-only">Published on</dt>
@@ -23,13 +23,6 @@ export const PostHeader: React.FunctionComponent<PostHeaderProps> = ({
           {post.title}
         </h2>
       </div>
-    </div>
-    <div className="mb-8 md:mb-8 sm:mx-0">
-      <img
-        src={post.coverImage}
-        alt={`${post.title}'s cover`}
-        className="shadow-small hover:shadow-medium transition-shadow duration-200"
-      />
     </div>
   </header>
 )

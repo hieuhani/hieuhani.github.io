@@ -1,5 +1,5 @@
 const Resume: React.FunctionComponent = () => {
-  return <div>Resume</div>
+  return <div className="container">Resume</div>
 }
 
 export default Resume

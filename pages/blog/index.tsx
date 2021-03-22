@@ -7,7 +7,7 @@ interface BlogProps {
 }
 const Blog: React.FunctionComponent<BlogProps> = ({ paginatedPost }) => {
   return (
-    <div>
+    <div className="container">
       {paginatedPost.posts.map((post) => (
         <BlockPost key={post.slug} post={post} />
       ))}

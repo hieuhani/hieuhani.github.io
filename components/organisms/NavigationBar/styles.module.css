@@ -1,9 +1,10 @@
 .nav-items a {
-  @apply flex flex-col items-center;
+  @apply flex items-center text-4xl relative py-4;
 }
 
-.nav-items :global a.active:not(.index-link)::after,
-.nav-items :global a.active.exact-active::after {
+.nav-items :global a.active:not(.index-link)::before,
+.nav-items :global a.active.exact-active::before {
   content: ' ';
-  @apply block w-2 h-2 mt-1 rounded-full bg-yellow-500;
+  left: -1rem;
+  @apply absolute w-4 h-4 rounded-full bg-yellow-500;
 }
