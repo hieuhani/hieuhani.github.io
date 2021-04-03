@@ -9,7 +9,7 @@ export const NavigationBar: React.FunctionComponent = () => {
   return (
     <div>
       <nav
-        className="px-4 py-4 sm:px-6 lg:px-8 flex items-center justify-between lg:justify-start"
+        className="container py-4 flex items-center justify-between lg:justify-start mb-2"
         aria-label="Global"
       >
         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
@@ -59,11 +59,7 @@ export const NavigationBar: React.FunctionComponent = () => {
                 Home
               </a>
             </Link>
-            <Link href="/blog">
-              <a className="font-medium text-gray-500 hover:text-gray-900 px-4">
-                Blog
-              </a>
-            </Link>
+
             <Link href="/portfolio">
               <a className="font-medium text-gray-500 hover:text-gray-900 px-4">
                 Portfolio
