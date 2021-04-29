@@ -8,7 +8,7 @@ export interface BlockPostProps {
 export const BlockPost: React.FunctionComponent<BlockPostProps> = ({
   post,
 }) => (
-  <article key={post.slug}>
+  <article key={post.slug} className="mb-4">
     <dl>
       <dt className="sr-only">Published on</dt>
       <dd className="text-base leading-6 font-medium text-gray-500">

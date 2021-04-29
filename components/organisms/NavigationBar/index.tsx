@@ -17,7 +17,7 @@ export const NavigationBar: React.FunctionComponent = () => {
             <Link href="/">
               <a>
                 <div className="flex items-center">
-                  <div className="ml-2">
+                  <div>
                     <h2 className="text-2xl">Hieu Tran</h2>
                     <blockquote>Product oriented developer</blockquote>
                   </div>
@@ -27,19 +27,21 @@ export const NavigationBar: React.FunctionComponent = () => {
           </div>
         </div>
 
-        <button
-          className={cx('hamburger hamburger--elastic z-20 ml-auto', {
-            'is-active': isMenuActive,
-          })}
-          onClick={toggleMenuActive}
-          type="button"
-          aria-label="Menu"
-          aria-controls="navigation"
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
-        </button>
+        {false && (
+          <button
+            className={cx('hamburger hamburger--elastic z-20 ml-auto', {
+              'is-active': isMenuActive,
+            })}
+            onClick={toggleMenuActive}
+            type="button"
+            aria-label="Menu"
+            aria-controls="navigation"
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
+            </span>
+          </button>
+        )}
         <nav
           id="navigation"
           className={cx(
