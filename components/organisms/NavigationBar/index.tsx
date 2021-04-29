@@ -17,7 +17,6 @@ export const NavigationBar: React.FunctionComponent = () => {
             <Link href="/">
               <a>
                 <div className="flex items-center">
-                  <img className="h-16 w-16 rounded-full" src="/hieuhani.svg" />
                   <div className="ml-2">
                     <h2 className="text-2xl">Hieu Tran</h2>
                     <blockquote>Product oriented developer</blockquote>
