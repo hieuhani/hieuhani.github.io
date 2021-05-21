@@ -20,7 +20,8 @@ const postsDirectory = path.resolve('data/blog')
 const extension = '.md'
 
 export const getMarkdownFileNames = (): string[] => {
-  return fs.readdirSync(postsDirectory)
+  const fileNames = fs.readdirSync(postsDirectory)
+  return fileNames.filter((name) => name.endsWith(extension))
 }
 
 export const fileNameToSlug = (fileName: string) => {
@@ -46,7 +47,12 @@ export const readPost = (fileName: string): Post => {
 export const getPosts = (first: number, offset: number): PaginatedPosts => {
   const fileNames = getMarkdownFileNames()
   return {
-    posts: fileNames.slice(offset, offset + first).map(readPost),
+    posts: fileNames
+      .map(readPost)
+      .sort((a, b) => {
+        return new Date(b.date) - new Date(a.date)
+      })
+      .slice(offset, offset + first),
     totalCount: fileNames.length,
   }
 }
