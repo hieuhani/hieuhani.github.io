@@ -1,7 +1,7 @@
 ---
 title: 'Xây dựng multi-tenant websites với NuxtJS'
 excerpt: 'Multi-tenant websites cho phép chúng ta chạy nhiều websites trên cùng một server instance với nhiều lợi ích giúp tiết kiệm tài nguyên server và chi phí cũng như thời gian phát triển. Hôm nay mình sẽ chia sẻ về cách mình xây dựng hệ thống nhiều website này.'
-coverImage: '/images/jason-rosewell-ASKeuOZqhYU.jpg'
+coverImage: '/images/george-becker-129494.jpg'
 date: '2020-02-21T08:35:07.322Z'
 ---
 
