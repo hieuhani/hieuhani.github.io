@@ -14,8 +14,9 @@ const SinglePost: React.FunctionComponent<SinglePostProps> = ({ post }) => {
       <Head>
         <title>{post.title}</title>
       </Head>
+      <PostHeader post={post} />
       <article className="max-w-2xl mx-auto">
-        <PostHeader post={post} />
+        
         <PostContent post={post} />
       </article>
     </>
