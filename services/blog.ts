@@ -24,7 +24,7 @@ export const getMarkdownFileNames = (): string[] => {
   return fileNames.filter((name) => name.endsWith(extension))
 }
 
-export const fileNameToSlug = (fileName: string) => {
+export const fileNameToSlug = (fileName: string): string => {
   return fileName.substring(0, fileName.length - extension.length)
 }
 
@@ -50,7 +50,7 @@ export const getPosts = (first: number, offset: number): PaginatedPosts => {
     posts: fileNames
       .map(readPost)
       .sort((a, b) => {
-        return new Date(b.date) - new Date(a.date)
+        return new Date(b.date).valueOf() - new Date(a.date).valueOf()
       })
       .slice(offset, offset + first),
     totalCount: fileNames.length,
