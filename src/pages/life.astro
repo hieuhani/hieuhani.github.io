@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import PostRow from "../components/PostRow.astro";
+
+const posts = (await getCollection("post"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .filter((post) => post.data.category === "story");
+---
+
+<Layout>
+  <main>
+    <ul>
+      {
+        posts.map((post) => (
+          <PostRow
+            title={post.data.title}
+            pubDate={post.data.pubDate}
+            slug={post.slug}
+          />
+        ))
+      }
+    </ul>
+  </main>
+</Layout>

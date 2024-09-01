@@ -1,0 +1,25 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+
+interface Props {
+  title: string;
+  pubDate: Date;
+  slug: string;
+}
+
+const { title, pubDate, slug } = Astro.props;
+---
+
+<li class="-mx-4">
+  <a
+    href={`/${slug}`}
+    class="block py-3 hover:dark:bg-zinc-800 rounded-lg px-4"
+  >
+    <h4 class="text-gray-500 dark:text-zinc-400 text-2xl font-medium">
+      {title}
+    </h4>
+    <p class="dark:text-zinc-600 text-lg">
+      <FormattedDate date={pubDate} />
+    </p>
+  </a>
+</li>
