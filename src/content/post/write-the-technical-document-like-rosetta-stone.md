@@ -14,7 +14,6 @@ I believe in software development, and especially when Agile is a buzz everywher
 
 The level of detail in documentation should indeed be adapted based on the type and complexity of the software being developed. For small or straightforward projects, brief and high-level documentation might suffice. This could include basic setup instructions, a high-level overview of the system, and simple user guides. We can focus on clean code and well software design, inline documentation can replace these formal documentation. For the complex system, comprehensive documentation is usually necessary. We can include detailed architecture design diagrams, database ERD, API documentation. To me, I like to  use [C4 Model](https://c4model.com/) for visualizing software architecture.
 
-
 When your team with varying levels of knowledge, it's crucial to tailor the document to accommodate. We should structure the documentation on layers, from a high-level overview to the details design then do the adjustment based on the empiricism.
 
 To me, as a developer, the source code is my favorite museum to exhibit the Rosetta Stone.
