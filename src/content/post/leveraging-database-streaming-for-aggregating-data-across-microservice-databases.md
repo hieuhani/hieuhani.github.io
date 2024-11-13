@@ -1,6 +1,6 @@
 ---
 title: "Leveraging Database Streaming for aggregating data across microservice databases"
-description: "Leveraging Database Streaming for aggregating data across microservice databases"
+description: "Use database streaming to capture changes across all source databases, ensuring that our view remains up to date. Database streaming bridges the gap between OLTP and OLAP systems, enabling near-real-time reporting, analytics, and data aggregation without impacting the performance of our transactional systems"
 pubDate: "November 08 2024"
 tags:
   - Software Engineer
@@ -38,5 +38,8 @@ I had investigated some existing database streaming solutions, most of them were
   > However, we're big believers in advancing the frontier of human knowledge. To that end, the source code of the standalone database engine is publicly available, in this repository, and licensed under the BSL 1.1, converting to the open-source Apache 2.0 license after 4 years. As stated in the BSL, use of the standalone database engine on a single node is free forever. Please be warned that this deployment model is not suitable for production use and we cannot offer support for it.
 
 3. RisingWave is a Postgres-compatible SQL database engineered to provide the simplest and most cost-efficient approach for processing, analyzing, and managing real-time event streaming data.
+  RisingWave has a clear page about the Premium Edition that helps me understand the differences between the versions. I’m, of course, willing to pay for the Premium Edition if necessary, but at the very least, the basic version should work.
 
-I’ve decided to move forward with this solution. I’ve set up RisingWave on my Kubernetes cluster and successfully started streaming data from the database. I’m now working on querying the data to meet the business requirements. I’ll review my experience with RisingWave later.
+  After experimenting with RisingWave for a few days, what I really appreciate is the documentation. It allowed me to set up my own installation seamlessly, both on my local cluster using Helm and on my development server using the Operator -- it was very straightforward.
+  Exploring RisingWave’s GitHub repository, I noticed there are over 1,000 issues at first glance, but it seems they effectively manage tasks and milestones there. Reading through some of their enhancement issues gave me deeper insights into advanced aspects that need attention when running a database streaming system.
+  I’ve completed my feature implementation using RisingWave. Now, I’ll focus on stress testing and setting up a monitoring system. Hopefully, everything will go smoothly.

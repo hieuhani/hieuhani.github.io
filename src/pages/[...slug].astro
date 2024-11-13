@@ -14,12 +14,17 @@ type Props = CollectionEntry<"post">;
 
 const post = Astro.props;
 const { Content } = await post.render();
+
+const metadata = {
+  title: post.data.title,
+  description: post.data.description,
+};
 ---
 
-<Layout>
+<Layout metadata={metadata}>
   <div class="pt-12 pb-4">
     <h3
-      class="font-bold leading-tighter tracking-tighter font-heading text-default text-5xl text-zinc-800 dark:text-zinc-200 mb-3"
+      class="font-bold leading-tight tracking-tight font-heading text-default text-5xl text-zinc-800 dark:text-zinc-200 mb-3"
     >
       {post.data.title}
     </h3>
