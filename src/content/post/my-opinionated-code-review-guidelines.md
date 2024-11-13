@@ -7,7 +7,7 @@ tags:
 ---
 
 To me, code review is the fastest way to reveal valuable insights into feature implementation and how developers approach as well as coding style.
-By examining code in detail, I can gain knowledge about coding skill, architectural decisions event some minor optimization strategies.
+By examining code in detail, I can gain knowledge about coding skill, architectural decisions even some minor optimization strategies.
 
 ![Talk is cheap](./media/talk-is-cheap.png)
 

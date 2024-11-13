@@ -11,7 +11,7 @@ import ThemeButton from "./ThemeButton.astro";
   <div
     class="relative mx-auto max-w-4xl py-3 px-3 md:px-6 w-full flex text-gray-800 dark:text-white"
   >
-    <a href="/" class="flex items-center text-xl font-medium"> Hieu Tran </a>
+    <a href="/" class="flex items-center text-2xl font-medium"> Hieu Tran </a>
     <nav class="flex items-center text-default font-medium ml-auto">
       <ul class="flex items-center">
         <li>
@@ -24,8 +24,12 @@ import ThemeButton from "./ThemeButton.astro";
           <a href="/about" class="px-4 py-4 md:py-3 block">About</a>
         </li>
       </ul>
-      <div class="space-x-3 flex ml-2">
-        <a href="https://twitter.com/hieuhani" target="_blank">
+      <div class="space-x-3 ml-2 flex items-center">
+        <a
+          href="https://twitter.com/hieuhani"
+          target="_blank"
+          class="hidden lg:inline-block"
+        >
           <span class="sr-only">Follow Hieu Tran on Twitter</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +47,11 @@ import ThemeButton from "./ThemeButton.astro";
             ></path></svg
           >
         </a>
-        <a href="https://github.com/hieuhani" target="_blank">
+        <a
+          href="https://github.com/hieuhani"
+          target="_blank"
+          class="hidden lg:inline-block"
+        >
           <span class="sr-only">Go to Hieu Tran Github</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
