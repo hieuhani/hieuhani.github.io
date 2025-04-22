@@ -7,7 +7,8 @@ tags:
 ---
 
 I'm working on an asset management product that is based on multiple independent underlying financial assets, such as cash, stocks, and certificates of deposit. The product requires an overview of all assets, which are aggregated from the independent databases of each product microservice.
-Initially, the MVP version was implemented on the client side, but as the dataset grew, this became inefficient, particularly when handling pagination. We also have an ETL pipeline for batch processing, which works well for analytical purposes but is not suitable when customers need to see updated asset information immediately after each transaction.
+
+The MVP version was implemented on the client side, but as the dataset grew, this became inefficient, particularly when handling pagination. We also have an ETL pipeline for batch processing, which works well for analytical purposes but is not suitable when customers need to see updated asset information immediately after each transaction.
 We also handle cases where the accrual value increases due to special events, such as receiving bond coupons or the start of a new savings period. This means the data is sourced not only from the microservice databases but also from external events, which are captured and processed through a materialized view. This view aggregates data from multiple PostgreSQL sources and reacts to external events, such as those from Kafka, triggering a refresh.
 To achieve this, we use database streaming to capture changes across all source databases, ensuring that our view remains up to date. Database streaming bridges the gap between OLTP and OLAP systems, enabling near-real-time reporting, analytics, and data aggregation without impacting the performance of our transactional systems. Change data capture (CDC) is implemented using techniques like WAL listening, snapshot comparisons, or comparing update timestamps.
 
