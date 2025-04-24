@@ -20,8 +20,6 @@ TLDR;
 
 Modern web applications demand fast, responsive, and efficient front-end experiences. Optimizing your front end is not just about faster load times—it’s about delivering a seamless user experience and making your codebase maintainable. Here are actionable strategies, examples, and best practices to elevate your front-end performance.
 
----
-
 ### **1. Reduce Application Bundle Size**
 
 Large bundles slow down load times and waste bandwidth. Here’s how to keep your bundle lean:
@@ -39,8 +37,6 @@ Large bundles slow down load times and waste bandwidth. Here’s how to keep you
 - Review and optimize polyfills and CSS prefixes quarterly.
 - Use code-splitting and lazy loading to load only what’s necessary for the current view.
 
----
-
 ### **2. Leverage Caching at Multiple Layers**
 
 Caching reduces redundant requests and speeds up repeat visits:
@@ -50,8 +46,6 @@ Caching reduces redundant requests and speeds up repeat visits:
 - **Browser storage:** Utilize localStorage, sessionStorage, or IndexedDB for persisting data client-side.
 - **Static Site Generation (SSG):** Pre-render pages at build time to serve static assets quickly.
 
----
-
 ### **3. Utilize Browser and Hardware Acceleration**
 
 Modern browsers and devices offer built-in acceleration:
@@ -60,8 +54,6 @@ Modern browsers and devices offer built-in acceleration:
 - Prefer CSS animations over JavaScript for better performance.
 - Use GPU-accelerated properties and hints like `will-change` to optimize rendering.
 
----
-
 ### **4. Minimize Unnecessary Re-Renders**
 
 Rendering only what’s needed keeps your app fast:
@@ -69,12 +61,10 @@ Rendering only what’s needed keeps your app fast:
 - In React, use `shouldComponentUpdate`, `React.memo`, and windowing techniques to avoid rendering off-screen components.
 - Use hooks like `useTransition`, `useOptimistic`, and `useDeferredValue` to manage state updates without blocking the UI.
 
----
-
 ### **5. Adopt Modern CSS and SVG Optimization Techniques**
 
 **CSS Optimization:**
-- Write concise CSS (e.g., `p-1` instead of `pt-2 pr-2 pb-2 pl-2`).
+- Write concise CSS (e.g., `p-2` instead of `pt-2 pr-2 pb-2 pl-2`).
 - Use simple selectors and avoid deep nesting.
 - Load CSS per media query to prevent render-blocking.
 - Use CSS sprites to reduce HTTP requests for icons.
@@ -86,21 +76,15 @@ Rendering only what’s needed keeps your app fast:
 - Combine paths and use `<use>` to avoid repetition.
 - Flatten SVG structure and use best practices for `viewBox`, `width`, and `height`.
 
----
-
 ### **6. Optimize Data Fetching**
 
 - Avoid render-fetch waterfalls (where rendering waits for data fetching). Use React Suspense and data loaders to fetch data in parallel with rendering.
 - Use route-based data loading to fetch data as routes load, not after.
 
----
-
 ### **7. Modernize Theme and Responsive Systems**
 
 - Use CSS variables for theming.
 - Leverage media queries for responsive design.
-
----
 
 ### **8. Optimize External Resource Loading**
 
@@ -109,26 +93,18 @@ Use `<link>` attributes to improve resource fetching:
 - `fetchpriority` to hint resource importance.
 - `media` to load CSS only for certain devices or screen sizes.
 
----
-
 ### **9. Improve Developer Experience**
 
 - Speed up build times with tools like RSPack, Turborepo, or TikTok Sparo.
 - Use module federation and micro-frontend architectures for scalable codebases.
 - Continuously review and optimize module linking in monorepos.
 
----
-
 ### **10. Use Smooth Effects and Animations**
 
 - Prefer CSS-based animations for performance.
 - Use hardware-accelerated properties for transitions.
 
----
-
 ### **11. Apply Micro-Optimizations**
 
 - Profile and optimize hot paths in your code.
 - Avoid unnecessary computations and DOM updates.
-
----
